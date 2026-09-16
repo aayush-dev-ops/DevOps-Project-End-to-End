@@ -1,0 +1,408 @@
+{
+    "format_version": "1.2",
+    "terraform_version": "1.16.2",
+    "planned_values": {
+        "outputs": {
+            "s3_bucket_arn": {
+                "sensitive": false
+            },
+            "s3_bucket_id": {
+                "sensitive": false
+            },
+            "s3_bucket_metadata": {
+                "sensitive": false,
+                "type": [
+                    "map",
+                    "string"
+                ],
+                "value": {
+                    "Environment": "Production",
+                    "Name": "My DevOps Demo bucket",
+                    "Owner": "Aayush"
+                }
+            },
+            "s3_bucket_name": {
+                "sensitive": false
+            }
+        },
+        "root_module": {
+            "resources": [
+                {
+                    "address": "aws_s3_bucket.demo_bucket",
+                    "mode": "managed",
+                    "type": "aws_s3_bucket",
+                    "name": "demo_bucket",
+                    "provider_name": "registry.terraform.io/hashicorp/aws",
+                    "schema_version": 0,
+                    "values": {
+                        "force_destroy": false,
+                        "region": "us-east-1",
+                        "tags": {
+                            "Environment": "Production",
+                            "Name": "My DevOps Demo bucket",
+                            "Owner": "Aayush"
+                        },
+                        "tags_all": {
+                            "Environment": "Production",
+                            "Name": "My DevOps Demo bucket",
+                            "Owner": "Aayush"
+                        },
+                        "timeouts": null
+                    },
+                    "sensitive_values": {
+                        "cors_rule": [],
+                        "grant": [],
+                        "lifecycle_rule": [],
+                        "logging": [],
+                        "object_lock_configuration": [],
+                        "replication_configuration": [],
+                        "server_side_encryption_configuration": [],
+                        "tags": {},
+                        "tags_all": {},
+                        "versioning": [],
+                        "website": []
+                    },
+                    "identity_schema_version": 0,
+                    "identity": {
+                        "account_id": null,
+                        "bucket": null,
+                        "region": null
+                    }
+                },
+                {
+                    "address": "random_string.suffix",
+                    "mode": "managed",
+                    "type": "random_string",
+                    "name": "suffix",
+                    "provider_name": "registry.terraform.io/hashicorp/random",
+                    "schema_version": 2,
+                    "values": {
+                        "keepers": null,
+                        "length": 6,
+                        "lower": true,
+                        "min_lower": 0,
+                        "min_numeric": 0,
+                        "min_special": 0,
+                        "min_upper": 0,
+                        "number": true,
+                        "numeric": true,
+                        "override_special": null,
+                        "special": false,
+                        "upper": false
+                    },
+                    "sensitive_values": {}
+                }
+            ]
+        }
+    },
+    "resource_changes": [
+        {
+            "address": "aws_s3_bucket.demo_bucket",
+            "mode": "managed",
+            "type": "aws_s3_bucket",
+            "name": "demo_bucket",
+            "provider_name": "registry.terraform.io/hashicorp/aws",
+            "change": {
+                "actions": [
+                    "create"
+                ],
+                "before": null,
+                "after": {
+                    "force_destroy": false,
+                    "region": "us-east-1",
+                    "tags": {
+                        "Environment": "Production",
+                        "Name": "My DevOps Demo bucket",
+                        "Owner": "Aayush"
+                    },
+                    "tags_all": {
+                        "Environment": "Production",
+                        "Name": "My DevOps Demo bucket",
+                        "Owner": "Aayush"
+                    },
+                    "timeouts": null
+                },
+                "after_unknown": {
+                    "acceleration_status": true,
+                    "acl": true,
+                    "arn": true,
+                    "bucket": true,
+                    "bucket_domain_name": true,
+                    "bucket_namespace": true,
+                    "bucket_prefix": true,
+                    "bucket_region": true,
+                    "bucket_regional_domain_name": true,
+                    "cors_rule": true,
+                    "grant": true,
+                    "hosted_zone_id": true,
+                    "id": true,
+                    "lifecycle_rule": true,
+                    "logging": true,
+                    "object_lock_configuration": true,
+                    "object_lock_enabled": true,
+                    "policy": true,
+                    "replication_configuration": true,
+                    "request_payer": true,
+                    "server_side_encryption_configuration": true,
+                    "tags": {},
+                    "tags_all": {},
+                    "versioning": true,
+                    "website": true,
+                    "website_domain": true,
+                    "website_endpoint": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                    "cors_rule": [],
+                    "grant": [],
+                    "lifecycle_rule": [],
+                    "logging": [],
+                    "object_lock_configuration": [],
+                    "replication_configuration": [],
+                    "server_side_encryption_configuration": [],
+                    "tags": {},
+                    "tags_all": {},
+                    "versioning": [],
+                    "website": []
+                },
+                "after_identity": {
+                    "account_id": null,
+                    "bucket": null,
+                    "region": null
+                }
+            }
+        },
+        {
+            "address": "random_string.suffix",
+            "mode": "managed",
+            "type": "random_string",
+            "name": "suffix",
+            "provider_name": "registry.terraform.io/hashicorp/random",
+            "change": {
+                "actions": [
+                    "create"
+                ],
+                "before": null,
+                "after": {
+                    "keepers": null,
+                    "length": 6,
+                    "lower": true,
+                    "min_lower": 0,
+                    "min_numeric": 0,
+                    "min_special": 0,
+                    "min_upper": 0,
+                    "number": true,
+                    "numeric": true,
+                    "override_special": null,
+                    "special": false,
+                    "upper": false
+                },
+                "after_unknown": {
+                    "id": true,
+                    "result": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+            }
+        }
+    ],
+    "output_changes": {
+        "s3_bucket_arn": {
+            "actions": [
+                "create"
+            ],
+            "before": null,
+            "after_unknown": true,
+            "before_sensitive": false,
+            "after_sensitive": false
+        },
+        "s3_bucket_id": {
+            "actions": [
+                "create"
+            ],
+            "before": null,
+            "after_unknown": true,
+            "before_sensitive": false,
+            "after_sensitive": false
+        },
+        "s3_bucket_metadata": {
+            "actions": [
+                "create"
+            ],
+            "before": null,
+            "after": {
+                "Environment": "Production",
+                "Name": "My DevOps Demo bucket",
+                "Owner": "Aayush"
+            },
+            "after_unknown": false,
+            "before_sensitive": false,
+            "after_sensitive": false
+        },
+        "s3_bucket_name": {
+            "actions": [
+                "create"
+            ],
+            "before": null,
+            "after_unknown": true,
+            "before_sensitive": false,
+            "after_sensitive": false
+        }
+    },
+    "prior_state": {
+        "format_version": "1.0",
+        "terraform_version": "1.16.2",
+        "values": {
+            "outputs": {
+                "s3_bucket_metadata": {
+                    "sensitive": false,
+                    "value": {
+                        "Environment": "Production",
+                        "Name": "My DevOps Demo bucket",
+                        "Owner": "Aayush"
+                    },
+                    "type": [
+                        "map",
+                        "string"
+                    ]
+                }
+            },
+            "root_module": {}
+        }
+    },
+    "configuration": {
+        "provider_config": {
+            "aws": {
+                "name": "aws",
+                "full_name": "registry.terraform.io/hashicorp/aws",
+                "version_constraint": "~\u003e 6.0",
+                "expressions": {
+                    "region": {
+                        "constant_value": "us-east-1"
+                    }
+                }
+            },
+            "random": {
+                "name": "random",
+                "full_name": "registry.terraform.io/hashicorp/random",
+                "version_constraint": "~\u003e 3.0"
+            }
+        },
+        "root_module": {
+            "outputs": {
+                "s3_bucket_arn": {
+                    "expression": {
+                        "references": [
+                            "aws_s3_bucket.demo_bucket.arn",
+                            "aws_s3_bucket.demo_bucket"
+                        ]
+                    }
+                },
+                "s3_bucket_id": {
+                    "expression": {
+                        "references": [
+                            "aws_s3_bucket.demo_bucket.id",
+                            "aws_s3_bucket.demo_bucket"
+                        ]
+                    }
+                },
+                "s3_bucket_metadata": {
+                    "expression": {
+                        "references": [
+                            "aws_s3_bucket.demo_bucket.tags",
+                            "aws_s3_bucket.demo_bucket"
+                        ]
+                    }
+                },
+                "s3_bucket_name": {
+                    "expression": {
+                        "references": [
+                            "aws_s3_bucket.demo_bucket.bucket",
+                            "aws_s3_bucket.demo_bucket"
+                        ]
+                    }
+                }
+            },
+            "resources": [
+                {
+                    "address": "aws_s3_bucket.demo_bucket",
+                    "mode": "managed",
+                    "type": "aws_s3_bucket",
+                    "name": "demo_bucket",
+                    "provider_config_key": "aws",
+                    "expressions": {
+                        "bucket": {
+                            "references": [
+                                "random_string.suffix.id",
+                                "random_string.suffix"
+                            ]
+                        },
+                        "tags": {
+                            "constant_value": {
+                                "Environment": "Production",
+                                "Name": "My DevOps Demo bucket",
+                                "Owner": "Aayush"
+                            }
+                        }
+                    },
+                    "schema_version": 0
+                },
+                {
+                    "address": "random_string.suffix",
+                    "mode": "managed",
+                    "type": "random_string",
+                    "name": "suffix",
+                    "provider_config_key": "random",
+                    "expressions": {
+                        "length": {
+                            "constant_value": 6
+                        },
+                        "special": {
+                            "constant_value": false
+                        },
+                        "upper": {
+                            "constant_value": false
+                        }
+                    },
+                    "schema_version": 2
+                }
+            ]
+        }
+    },
+    "relevant_attributes": [
+        {
+            "resource": "aws_s3_bucket.demo_bucket",
+            "attribute": [
+                "arn"
+            ]
+        },
+        {
+            "resource": "random_string.suffix",
+            "attribute": [
+                "id"
+            ]
+        },
+        {
+            "resource": "aws_s3_bucket.demo_bucket",
+            "attribute": [
+                "bucket"
+            ]
+        },
+        {
+            "resource": "aws_s3_bucket.demo_bucket",
+            "attribute": [
+                "id"
+            ]
+        },
+        {
+            "resource": "aws_s3_bucket.demo_bucket",
+            "attribute": [
+                "tags"
+            ]
+        }
+    ],
+    "timestamp": "2026-09-15T05:04:02Z",
+    "applyable": true,
+    "complete": true,
+    "errored": false
+}
